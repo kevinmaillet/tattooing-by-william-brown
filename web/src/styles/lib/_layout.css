@@ -8,3 +8,27 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.about-text {
+  max-width: 80ch;
+  font-size: 1.5rem;
+}
+
+.about-photo {
+  width: 500px;
+}
+
+@media only screen and (max-width: 1216px) {
+  .about-photo {
+    margin-top: 1rem;
+  }
+}

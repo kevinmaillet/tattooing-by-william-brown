@@ -17,7 +17,7 @@
 .hero {
   /* max-width: 1200px; */
   margin: 0 auto;
-  height: 90vh;
+  height: calc(100vh - 95px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,16 +71,6 @@ a {
     transform: translateY(8px);
   }
 
-  @keyframes navOpen {
-    0% {
-      background-color: none;
-    }
-
-    100% {
-      background-color: rgba(224, 224, 224, 0.9);
-    }
-  }
-
   .navbarActive {
     display: block;
     position: absolute;
@@ -117,4 +107,5 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  padding-bottom: 20px;
 }

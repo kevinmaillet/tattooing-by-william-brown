@@ -6,7 +6,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import siteSettings from './siteSettings'
 import tattooImages from './tattooImages'
-import about from './about'
 import contact from './contact'
 import paintingImages from './paintingImages'
 import heroImage from './heroImage'
@@ -23,7 +22,6 @@ export default createSchema({
     tattooImages,
     paintingImages,
     heroImage,
-    about,
     contact
   ])
 })

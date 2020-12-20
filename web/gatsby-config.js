@@ -48,7 +48,7 @@ module.exports = {
     //     background_color: `#000`,
     //     theme_color: `#FFF`,
     //     display: `standalone`,
-    //     icon: `src/images/myIcon.ico`,
+    //     icon: `src/images/myIcon.png`,
     //   },
     // },
   ],
