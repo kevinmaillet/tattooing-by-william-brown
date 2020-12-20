@@ -25,7 +25,7 @@ const DisplayGrid = (props) =>  {
         })
 
         return (
-            <div className="container"> 
+            <div className="displaygrid-container"> 
             {renderImages}
             </div>
         )    
