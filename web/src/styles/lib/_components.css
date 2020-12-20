@@ -30,6 +30,7 @@ a {
 .logo {
   z-index: 500;
   font-size: 2rem;
+  letter-spacing: 1.5px;
 }
 
 .header a {
@@ -97,7 +98,7 @@ a {
     animation-duration: 5s;
   }
 
-  .navbarActive a:nth-child(-n + 4) {
+  .navbarActive a:nth-child(-n + 3) {
     border-bottom: 1px solid black;
   }
 
@@ -106,7 +107,7 @@ a {
   }
 
   .navbarActive a {
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     padding: 6px 0;
   }
 }
