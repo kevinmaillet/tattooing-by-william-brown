@@ -29,9 +29,9 @@ a {
   color: black;
 }
 
-a:hover {
+.header a:hover {
   color: gray;
-  animation: hoverEffect 0.25s ease-in;
+  animation: hoverEffect 0.2s ease-in;
 }
 
 @keyframes hoverEffect {
@@ -117,8 +117,8 @@ a:hover {
   padding-bottom: 20px;
 }
 
-@media (hover: hover) {
-  button:hover {
-    border: 3px solid green;
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: red;
   }
 }

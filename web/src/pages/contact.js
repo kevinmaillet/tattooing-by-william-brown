@@ -19,9 +19,9 @@ const Contact = (props) => {
       <div className="contact" >
         <p className="about-text" >
           {textOne}
-          <a href={`mailto:${email}`}>{email}</a>
+          <a href={`mailto:${email}`} className="about-link">{email}</a>
           {textTwo}
-          <a href="https://www.instagram.com/williampbrown" target="_blank" rel="noreferrer">{ig}</a>
+          <a href="https://www.instagram.com/williampbrown" target="_blank" rel="noreferrer" className="about-link">{ig}</a>
           {textThree}
         </p>
         <div className="about-photo" >

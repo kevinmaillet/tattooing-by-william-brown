@@ -23,6 +23,24 @@
   font-size: 1.5rem;
 }
 
+.about-link {
+  color: gray;
+}
+
+.about-link:hover {
+  color: black;
+  animation: hoverEffectLink 0.2s ease-in;
+}
+
+@keyframes hoverEffectLink {
+  0% {
+    color: gray;
+  }
+  100% {
+    color: black;
+  }
+}
+
 .about-photo {
   width: 500px;
 }
