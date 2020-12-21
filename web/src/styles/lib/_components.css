@@ -31,6 +31,16 @@ a {
 
 a:hover {
   color: gray;
+  animation: hoverEffect 0.25s ease-in;
+}
+
+@keyframes hoverEffect {
+  0% {
+    color: black;
+  }
+  100% {
+    color: gray;
+  }
 }
 
 .logo {
@@ -38,14 +48,6 @@ a:hover {
   font-size: 2rem;
   letter-spacing: 1.5px;
 }
-
-/* .header a {
-  color: black;
-}
-
-.header a:hover {
-  color: gray;
-} */
 
 .navbar a {
   margin: 0 1rem;
@@ -113,4 +115,10 @@ a:hover {
   left: 50%;
   transform: translateX(-50%);
   padding-bottom: 20px;
+}
+
+@media (hover: hover) {
+  button:hover {
+    border: 3px solid green;
+  }
 }

@@ -49,10 +49,10 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram size={15} className="instagram" />
+              <Instagram size={15} className="instagram" alt="instagram link"/>
             </a>
           </nav>
-          <Link to="#" className="hamburger-menu" onClick={handleClick}>
+          <Link to="#" className="hamburger-menu" onClick={handleClick} alt="hamburger bar">
             {handleIconChange()}
           </Link>
         </div>
