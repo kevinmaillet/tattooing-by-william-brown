@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'about',
-      type: 'text',
+      type: 'portableText',
       title: 'About',
       description: 'Write about stuff here.'
     },

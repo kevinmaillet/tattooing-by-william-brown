@@ -25,6 +25,12 @@
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
 }
 
 .logo {
@@ -33,15 +39,13 @@ a {
   letter-spacing: 1.5px;
 }
 
-.header a {
-  text-decoration: none;
+/* .header a {
   color: black;
 }
 
-.header a:hover,
-.header-active {
+.header a:hover {
   color: gray;
-}
+} */
 
 .navbar a {
   margin: 0 1rem;
@@ -51,7 +55,7 @@ a {
   transform: translateY(0.2rem);
 }
 
-.menu {
+.hamburger-menu {
   display: none;
 }
 
@@ -65,7 +69,7 @@ a {
   .navbar {
     display: none;
   }
-  .menu {
+  .hamburger-menu {
     display: block;
     z-index: 60;
     transform: translateY(8px);

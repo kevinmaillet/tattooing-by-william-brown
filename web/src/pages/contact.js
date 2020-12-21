@@ -5,12 +5,24 @@ import Img from 'gatsby-image'
 const Contact = (props) => {
 
 
+  const [ about ]   = props.data.sanityContact.about;
+
+  const contactArray = about._rawChildren.map((obj)=> {
+    return obj.text;
+  });
+
+  const [ textOne, email, textTwo, ig, textThree] = contactArray;
+
 
   return (
     <Layout title="Contact">
       <div className="contact" >
         <p className="about-text" >
-          {props.data.sanityContact.about}
+          {textOne}
+          <a href={`mailto:${email}`}>{email}</a>
+          {textTwo}
+          <a href="https://www.instagram.com/williampbrown" target="_blank" rel="noreferrer">{ig}</a>
+          {textThree}
         </p>
         <div className="about-photo" >
           <Img
@@ -26,17 +38,24 @@ const Contact = (props) => {
 export const query = graphql`
 query Contact {
   sanityContact {
-    about
+    about {
+      _key
+      _type
+      style
+      list
+      _rawChildren
+    }
     title
     image {
       asset {
         fluid(maxWidth: 450) {
-         ...GatsbySanityImageFluid
+				...GatsbySanityImageFluid
         }
       }
     }
   }
 }
+
 `
 
 export default Contact

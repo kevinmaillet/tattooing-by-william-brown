@@ -9,6 +9,7 @@ import tattooImages from './tattooImages'
 import contact from './contact'
 import paintingImages from './paintingImages'
 import heroImage from './heroImage'
+import portableText from './portableText'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,6 +19,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your types here! */
+    portableText,
     siteSettings,
     tattooImages,
     paintingImages,

@@ -21,9 +21,11 @@
     "@sanity/default-login": "^2.0.1",
     "@sanity/desk-tool": "^2.0.2",
     "@sanity/vision": "^2.0.1",
+    "graphql": "^15.4.0",
     "prop-types": "^15.6",
     "react": "^16.2",
-    "react-dom": "^16.2"
+    "react-dom": "^16.2",
+    "react-icons": "^4.1.0"
   },
   "devDependencies": {}
 }

@@ -52,7 +52,7 @@ const Header = () => {
               <Instagram size={15} className="instagram" />
             </a>
           </nav>
-          <Link to="#" className="menu" onClick={handleClick}>
+          <Link to="#" className="hamburger-menu" onClick={handleClick}>
             {handleIconChange()}
           </Link>
         </div>
