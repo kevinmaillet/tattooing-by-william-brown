@@ -7,7 +7,7 @@ module.exports = {
     titleTemplate: "%s - Tattooing by William Brown",
     description:
       "William Brown is a Tattoo Artist based in NYC and Sydney",
-    url: "https://www.williampeterbrown.com", 
+    url: "https://www.williampeterbrown.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -45,10 +45,11 @@ module.exports = {
     //     name: `Tattooing by William Brown`,
     //     short_name: `William Brown`,
     //     start_url: `/`,
-    //     background_color: `#000`,
-    //     theme_color: `#FFF`,
+    //     background_color: `#0000000`,
+    //     theme_color: `#FFFFFF`,
     //     display: `standalone`,
-    //     icon: `src/images/myIcon.png`,
+    //     // icon: `src/images/apple-icon.png`,
+    //     legacy: true
     //   },
     // },
   ],

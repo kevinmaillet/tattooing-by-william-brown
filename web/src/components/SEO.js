@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 import favicon from '../images/myIcon.png';
+import appleImage from '../images/apple-icon.png'
 
 
 const SEO = ({ title, description, article }) => {
@@ -15,7 +16,6 @@ const SEO = ({ title, description, article }) => {
         titleTemplate,
         defaultDescription,
         siteUrl,
-        twitterUsername,
       } = site.siteMetadata
 
     const seo = {
@@ -28,15 +28,18 @@ const SEO = ({ title, description, article }) => {
       return (
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
           <meta name="description" content={seo.description} />
+          <meta name="image" content={appleImage} />
           {seo.url && <meta property="og:url" content={seo.url} />}
           {(article ? true : null) && <meta property="og:type" content="article" />}
           {seo.title && <meta property="og:title" content={seo.title} />}
           {seo.description && (
             <meta property="og:description" content={seo.description} />
           )}
+          <meta property="og:locale" content="en_US" />
           <link rel="preconnect" href="https://fonts.gstatic.com"></link>
           <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"></link>
           <link rel="icon" href={favicon} />
+          <link rel="apple-touch-icon" href={favicon}></link>
         </Helmet>
       )
 }
@@ -59,13 +62,11 @@ const query = graphql`
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  image: PropTypes.string,
   article: PropTypes.bool,
 }
 
 SEO.defaultProps = {
   title: null,
   description: null,
-  image: null,
   article: false,
 }

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from 'gatsby';
 import Layout from "../layout/Layout"
 import DisplayGrid from "../components/DisplayGrid"
-import SEO from "../components/DisplayGrid"
 
 
 const Tattoos = ({data}) => {
