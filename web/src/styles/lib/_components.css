@@ -29,20 +29,6 @@ a {
   color: black;
 }
 
-.header a:hover {
-  color: gray;
-  animation: hoverEffect 0.2s ease-in;
-}
-
-@keyframes hoverEffect {
-  0% {
-    color: black;
-  }
-  100% {
-    color: gray;
-  }
-}
-
 .logo {
   z-index: 500;
   font-size: 2rem;
@@ -118,7 +104,17 @@ a {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  a:hover {
-    color: red;
+  .header a:hover {
+    color: gray;
+    animation: hoverEffect 0.2s ease-in;
+  }
+
+  @keyframes hoverEffect {
+    0% {
+      color: black;
+    }
+    100% {
+      color: gray;
+    }
   }
 }
