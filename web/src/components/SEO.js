@@ -9,7 +9,7 @@ import appleImage from '../images/apple-icon.png'
 
 const SEO = ({ title, description, article }) => {
     const { pathname } = useLocation()
-    const { site } = useStaticQuery(query)
+    const { site, sanitySiteSettings } = useStaticQuery(query)
 
     const {
         defaultTitle,
@@ -17,6 +17,10 @@ const SEO = ({ title, description, article }) => {
         defaultDescription,
         siteUrl,
       } = site.siteMetadata
+
+    const {
+      keywords
+    } = sanitySiteSettings
 
     const seo = {
         title: title || defaultTitle,
@@ -30,6 +34,7 @@ const SEO = ({ title, description, article }) => {
           <html lang="en" />
           <meta name="description" content={seo.description} />
           <meta name="image" content={appleImage} />
+          <meta name="keywords" content={keywords.join(", ")} />
           {seo.url && <meta property="og:url" content={seo.url} />}
           {(article ? true : null) && <meta property="og:type" content="article" />}
           {seo.title && <meta property="og:title" content={seo.title} />}
@@ -48,16 +53,20 @@ const SEO = ({ title, description, article }) => {
 export default SEO
 
 const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        titleTemplate
-        defaultDescription: description
-        siteUrl: url
-      }
+query SEO {
+  site {
+    siteMetadata {
+      defaultTitle: title
+      titleTemplate
+      defaultDescription: description
+      siteUrl: url
     }
   }
+  sanitySiteSettings {
+    keywords
+  }
+}
+
 `
 
 SEO.propTypes = {
