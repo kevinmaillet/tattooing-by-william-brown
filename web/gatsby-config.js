@@ -39,18 +39,18 @@ module.exports = {
         ]
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Tattooing by William Brown`,
-    //     short_name: `William Brown`,
-    //     start_url: `/`,
-    //     background_color: `#0000000`,
-    //     theme_color: `#FFFFFF`,
-    //     display: `standalone`,
-    //     // icon: `src/images/apple-icon.png`,
-    //     legacy: true
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Tattooing by William Brown`,
+        short_name: `William Brown`,
+        start_url: `/`,
+        background_color: `#0000000`,
+        theme_color: `#FFFFFF`,
+        display: `standalone`,
+        icon: `src/images/apple-icon.png`,
+        legacy: true
+      },
+    },
   ],
 }
