@@ -76,8 +76,6 @@ a {
     height: 100%;
     overflow: hidden;
     z-index: 50;
-    animation-name: navOpen;
-    animation-duration: 5s;
   }
 
   .navbarActive a:nth-child(-n + 3) {
