@@ -45,7 +45,7 @@ module.exports = {
         name: `Tattooing by William Brown`,
         short_name: `William Brown`,
         start_url: `/`,
-        background_color: `#0000000`,
+        background_color: `#000000`,
         theme_color: `#FFFFFF`,
         display: `standalone`,
         icon: `src/images/apple-icon.png`,
