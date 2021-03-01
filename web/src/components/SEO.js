@@ -16,6 +16,7 @@ const SEO = ({ title, description, article }) => {
         titleTemplate,
         defaultDescription,
         siteUrl,
+        author
       } = site.siteMetadata
 
     const {
@@ -26,6 +27,7 @@ const SEO = ({ title, description, article }) => {
         title: title || defaultTitle,
         description: description || defaultDescription,
         url: `${siteUrl}${pathname}`,
+        author: author
       }
 
 
@@ -35,6 +37,7 @@ const SEO = ({ title, description, article }) => {
           <meta name="description" content={seo.description} />
           <meta name="image" content={appleImage} />
           <meta name="keywords" content={keywords.join(", ")} />
+          <meta name="author" content={author} />
           {seo.url && <meta property="og:url" content={seo.url} />}
           {(article ? true : null) && <meta property="og:type" content="article" />}
           {seo.title && <meta property="og:title" content={seo.title} />}
@@ -60,6 +63,7 @@ query SEO {
       titleTemplate
       defaultDescription: description
       siteUrl: url
+      author
     }
   }
   sanitySiteSettings {

@@ -8,6 +8,7 @@ module.exports = {
     description:
       "William Brown is a Tattoo Artist based in NYC and Sydney",
     url: "https://www.williampeterbrown.com",
+    author: `kevinmaillet`
   },
   plugins: [
     `gatsby-transformer-sharp`,
