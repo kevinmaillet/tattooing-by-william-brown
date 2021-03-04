@@ -13,50 +13,50 @@ const Header = () => {
 
   const handleIconChange = () => {
     if (showMenu) {
-      return <X className="x"/>
+      return <X className="x" />
     } else {
       return <Menu />
     }
   }
 
   const handleNavClick = e => {
-    if (e.target.className === 'navbarActive') {
-      e.stopPropagation();
+    if (e.target.className === "navbarActive") {
+      e.stopPropagation()
       setShowMenu(!showMenu)
     }
   }
 
-
-    return (
-        <div className="header">
-          <div className="logo">
-            <Link to="/">Tattooing by William Brown</Link>
-          </div>
-          <nav
-            className={
-              showMenu
-                ? "navbarActive"
-                : "navbar"
-            }
-            onClick={handleNavClick}
-            onKeyDown={handleNavClick}
-          >
-            <Link to="/tattoos">Tattoos</Link>
-            <Link to="/paintings">Paintings</Link>
-            <Link to="/contact">Contact</Link>
-            <a
-              href="https://www.instagram.com/williampbrown/?hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram size={15} className="instagram" alt="instagram link"/>
-            </a>
-          </nav>
-          <Link to="#" className="hamburger-menu" onClick={handleClick} alt="hamburger bar">
-            {handleIconChange()}
-          </Link>
-        </div>
-    )
+  return (
+    <div className="header">
+      <div className="logo">
+        <Link to="/">Tattooing by William Brown</Link>
+      </div>
+      <nav
+        className={showMenu ? "navbarActive" : "navbar"}
+        onClick={handleNavClick}
+        onKeyDown={handleNavClick}
+      >
+        <Link to="/tattoos">Tattoos</Link>
+        <Link to="/paintings">Paintings</Link>
+        <Link to="/contact">Contact</Link>
+        <a
+          href="https://www.instagram.com/williampbrown/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram size={15} className="instagram" alt="instagram link" />
+        </a>
+      </nav>
+      <Link
+        to="#"
+        className="hamburger-menu"
+        onClick={handleClick}
+        alt="hamburger bar"
+      >
+        {handleIconChange()}
+      </Link>
+    </div>
+  )
 }
 
 export default Header

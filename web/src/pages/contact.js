@@ -1,35 +1,41 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 import Layout from "../layout/Layout"
-import Img from 'gatsby-image'
+import Img from "gatsby-image"
 
-const Contact = (props) => {
+const Contact = props => {
+  const [about] = props.data.sanityContact.about
 
+  const contactArray = about._rawChildren.map(obj => {
+    return obj.text
+  })
 
-  const [ about ]   = props.data.sanityContact.about;
-
-  const contactArray = about._rawChildren.map((obj)=> {
-    return obj.text;
-  });
-
-  const [ textOne, email, textTwo, ig, textThree] = contactArray;
-
+  const [textOne, email, textTwo, ig, textThree] = contactArray
 
   return (
     <Layout title="Contact">
-      <div className="contact" >
-        <p className="about-text" >
+      <div className="contact">
+        <p className="about-text">
           {textOne}
-          <a href={`mailto:${email}`} className="about-link">{email}</a>
+          <a href={`mailto:${email}`} className="about-link">
+            {email}
+          </a>
           {textTwo}
-          <a href="https://www.instagram.com/williampbrown" target="_blank" rel="noreferrer" className="about-link">{ig}</a>
+          <a
+            href="https://www.instagram.com/williampbrown"
+            target="_blank"
+            rel="noreferrer"
+            className="about-link"
+          >
+            {ig}
+          </a>
           {textThree}
         </p>
-        <div className="about-photo" >
+        <div className="about-photo">
           <Img
-                fluid={props.data.sanityContact.image.asset.fluid}
-                alt={props.data.sanityContact.title}
-            />
+            fluid={props.data.sanityContact.image.asset.fluid}
+            alt={props.data.sanityContact.title}
+          />
         </div>
       </div>
     </Layout>
@@ -37,26 +43,25 @@ const Contact = (props) => {
 }
 
 export const query = graphql`
-query Contact {
-  sanityContact {
-    about {
-      _key
-      _type
-      style
-      list
-      _rawChildren
-    }
-    title
-    image {
-      asset {
-        fluid(maxWidth: 450) {
-				...GatsbySanityImageFluid
+  query Contact {
+    sanityContact {
+      about {
+        _key
+        _type
+        style
+        list
+        _rawChildren
+      }
+      title
+      image {
+        asset {
+          fluid(maxWidth: 450) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
     }
   }
-}
-
 `
 
 export default Contact
